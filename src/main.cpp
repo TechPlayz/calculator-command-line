@@ -38,6 +38,6 @@ int main() {
     else {
          cout << "Invalid operation \a" <<op<<"\n";
     }
-	cout << "PRESS ctrl+c to exit TO EXIT";
+	cout << "PRESS ctrl+c to exit";
 	cin >> enter;
 }
