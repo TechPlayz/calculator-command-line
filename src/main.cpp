@@ -40,12 +40,4 @@ int main() {
     }
 	cout << "PRESS ctrl+c to exit TO EXIT";
 	cin >> enter;
-	if(enter == 0) {
-		return 0;
-	}else {
-		return 0;;
-	}
-
-
-
 }
