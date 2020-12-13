@@ -6,7 +6,7 @@ int main() {
     float op;
     float A;
     float B;
-	string enter;
+	int enter;
     cout << "Welcome to Tech Playz calculator app \n";
     cout << "Which operation do you want \n";
     cout << "1-Addition \n"<<"2-Subtraction \n"<<"3-Multiplication \n"<<"4-Division \n";
@@ -28,15 +28,23 @@ int main() {
          cout << "The product is "<<prod(A,B)<<endl;
     }
     else if(op==4) {
+		if(B==0) {
+			cout << "CANNOT DIVIDE BY 0!"<<endl;
+		}
          quot(A,B);
          cout << "The quotient is "<<quot(A,B) <<endl;
          cout << "The remainder is " << remainder(A,B) <<endl;
     }
     else {
-         cout << "Invalid operation \a \n" <<op;
+         cout << "Invalid operation \a" <<op<<"\n";
     }
-    return 0;
-
+	cout << "PRESS ctrl+c to exit TO EXIT";
+	cin >> enter;
+	if(enter == 0) {
+		return 0;
+	}else {
+		return 0;;
+	}
 
 
 
