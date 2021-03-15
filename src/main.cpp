@@ -1,43 +1,75 @@
+/*
+* Just a simple calculator
+*/
 #include <iostream>
-#include "mathfunc.h"
 using namespace std;
 
+float sum(float a,float b) {
+    float s;
+    s=a+b;
+    return (s);
+}
+float diff(float a,float b) {
+    float d;
+    d=a-b;
+    return (d);
+}
+float prod(float a,float b) {
+    float p;
+    p=a*b;
+    return (p);
+}
+float quot(float a,float b) {
+    float q;
+    q=a/b;
+    return (q);
+}
+int remainder(int a,int b) {
+    int r;
+    r=a%b;
+    return r;
+}
+
 int main() {
-    float op;
-    float A;
-    float B;
-    int enter;
-    cout << "Welcome to Tech Playz calculator app \n";
+    float a;
+    float b;
+    int op;
+    int ctrlc;
+    
+    cout << "Enter the first number: ";
+    cin >> a;
+    cout << "Enter the second number: ";
+    cin >> b;
     cout << "Which operation do you want \n";
     cout << "1-Addition \n"<<"2-Subtraction \n"<<"3-Multiplication \n"<<"4-Division \n";
     cin >> op;
-    cout << "Enter the first number: ";
-    cin >> A;
-    cout << "Enter the second number: ";
-    cin >> B;
-    if(op==1) {
-        sum(A,B);
-        cout << "The sum is "<<sum(A,B)<<endl;
+    switch(op) {
+        case 1:
+            cout << "The sum is: " << sum(a, b);
+            goto end;
+        case 2:
+            cout << "The difference is: " << diff(a, b);
+            goto end;
+        case 3:
+            cout << "The product is: " << prod(a, b);
+            goto end;
+        case 4:
+            if(b==0) {
+                cout << "Cannot divide by 0";
+                goto end;
+            }else {
+                cout << "The quotient is: " << quot(a, b);
+                cout << "\nThe remainder is: " << remainder(a, b);
+                goto end;
+            }
+        default:
+            cout << "Invalid operation";
+            goto end;
     }
-    else if(op==2) {
-        diff(A,B);
-        cout << "The difference is "<<diff(A,B)<<endl;
-    }
-    else if(op==3) {
-         prod(A,B);
-         cout << "The product is "<<prod(A,B)<<endl;
-    }
-    else if(op==4) {
-		if(B==0) {
-			cout << "CANNOT DIVIDE BY 0!"<<endl;
-		}
-         quot(A,B);
-         cout << "The quotient is "<<quot(A,B) <<endl;
-         cout << "The remainder is " << remainder(A,B) <<endl;
-    }
-    else {
-         cout << "Invalid operation \a" <<op<<"\n";
-    }
-	cout << "PRESS ctrl+c to exit";
-	cin >> enter;
+    end:
+        cout << "\nPress Ctrl+C to exit";
+        cin >> ctrlc;
+    return 0;
+
 }
+
