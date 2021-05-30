@@ -17,7 +17,7 @@ int main() {
 	switch(op) {
 		case 1:
 			float sum;
-			cout << "Enter the number of digits: ";
+			cout << "How many numbers do you want to add: ";
 			if(!(cin >> digSize)) {
 				cout << "Value must be a number!" << endl;
 				goto end;
@@ -36,7 +36,7 @@ int main() {
 			goto end;
 		case 2:
 			float diff;
-			cout << "Enter the number of digits: ";
+			cout << "How many numbers do you want to subtract: ";
 			if(!(cin >> digSize)) {
 				cout << "Value must be a number!" << endl;
 				goto end;
@@ -77,7 +77,7 @@ int main() {
 			}
 		case 4:
 			float prod;
-			cout << "Enter the number of digits: ";
+			cout << "How many numbers do you want to multiply: ";
 			if(!(cin >> digSize)) {
 				cout << "Value must be a number!" << endl;
 				goto end;
