@@ -1,5 +1,5 @@
-# calculator-command-line
-A simple command line calculator written in C++. Can iterate upto the number of digits you specify
+# Console Calculator
+A simple console calculator written in C++.
 
 # Compiling
 You must have gcc compiler installed.
